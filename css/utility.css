@@ -1,0 +1,70 @@
+.border {
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.item-center {
+    align-items: center;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.bg-grey {
+    background-color: #121212;;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.m-1 {
+    margin: 5px;
+
+}
+
+.p-1 {
+    padding: 14px;
+}
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 14px; /* Width for the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background for the scrollbar track */
+    border-radius: 10px; /* Rounded track edges */
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8); /* Inner shadow for depth */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6347, #ff4500, #ff7f50); /* Initial gradient */
+    background-size: 200% 200%; /* Large background for smooth animation */
+    border-radius: 10px; /* Rounded edges */
+    border: 3px solid #1e1e1e; /* Dark border matching the track */
+    animation: colorChange 6s ease infinite; /* Animation that changes colors */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6); /* Shadow to add depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for interactions */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8), 0 0 25px rgba(255, 99, 71, 0.6);
+  }
+
+
+  

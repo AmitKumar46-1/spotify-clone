@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <audio id="audioPlayer" controls>
+        <source src="" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <input type="range" id="seekBar" value="0" max="100" style="width: 100%; height: 5px; background-color: grey;">
+
+
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const seekBar = document.getElementById('seekBar');
+
+        // Update the seekbar as the audio plays
+        audioPlayer.addEventListener('timeupdate', () => {
+            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            seekBar.value = progress;
+
+            // Change color dynamically based on the progress
+            if (progress <= 50) {
+                seekBar.style.background = 'linear-gradient(to right, red ' + progress + '%, grey ' + progress + '%)';
+            } else {
+                seekBar.style.background = 'linear-gradient(to right, green ' + progress + '%, grey ' + progress + '%)';
+            }
+        });
+
+        // Update audio time when seekbar is manually changed
+        seekBar.addEventListener('input', () => {
+            const newTime = (seekBar.value / 100) * audioPlayer.duration;
+            audioPlayer.currentTime = newTime;
+        });
+
+    </script>
+</body>
+
+</html>
